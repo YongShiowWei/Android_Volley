@@ -1,9 +1,10 @@
 # Android_Volley
 
-1. Run XAMPP > Start Apache & MySQ <br>
+1. Run XAMPP > Start Apache & MySQL <br>
 2. Create a new database: <b>lingualearning_app</b> <br>
-3. Go to "C:\xampp\htdocs\"
-4. Create a new folder: <b>lingualearningapp</b>  
-5. Create a new folder: <b>images</b> in lingualearning folder
-6. Copy uploaded php file to the lingualearning folder
-7. Run app
+3. Create tables : units, lessons
+4. Go to "C:\xampp\htdocs\"
+5. Create a new folder: <b>lingualearningapp</b>  
+6. Create a new folder: <b>images</b> in lingualearning folder
+7. Copy uploaded php file to the lingualearning folder
+8. Run app
