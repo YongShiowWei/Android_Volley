@@ -9,9 +9,9 @@ if(isset($_POST['email']) && isset($_POST['password'])){
 	$result = $conn->query($sql);
 
 	if($result->num_rows>0){
-		echo "Success";
+		echo "success";
 	}else{
-		echo "Failure";
+		echo "failure";
 	}
 }
 ?>
