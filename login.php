@@ -6,7 +6,7 @@ if(isset($_POST['email']) && isset($_POST['password'])){
 	$password = $_POST['password'];
 
 	$sql = "select * from users where email='$email' and password='$password'";
-	$result = $conn->query(sql);
+	$result = $conn->query($sql);
 
 	if($result->num_rows>0){
 		echo "Success";
