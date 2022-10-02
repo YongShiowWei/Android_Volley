@@ -2,19 +2,21 @@
 
         require_once "conn.php";
 
-        $email=$_POST['email'];
+        $email = $_POST['email'];
 
-    $sql="SELECT username,email,password from users WHERE email ='$email'";
-    $result = $conn->query($sql);
+    $result = $conn->prepare("SELECT username, email, password FROM users WHERE email ='$email'");
+    $result->execute();
+	$result->bind_result($username, $email, $password);
+	$user = array();
 
-        $users($row = $result->fetch_assoc()){
-        $temp = array();
-	$temp["name"] = $row["name"];
-	$temp["email"] = $row["email"];
-	$temp["password"] = $row["password"];
-        array_push($user,$temp);
+        while($result->fetch()){
+                $temp = array();
+	        $temp['username'] = $username;
+	        $temp['email'] = $email;
+	        $temp['password'] = $password;
+
+                array_push($user,$temp);
         }
-        echo json_encode($users);
+        echo json_encode($user);
     
-
 ?>
