@@ -7,7 +7,7 @@ if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['passwor
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $sql = "insert into users values('$username','$email','$password')";
+    $sql = "INSERT INTO users (id, username, email, password) VALUES ('', $username','$email','$password')";
 
     if (!$conn->query($sql)) {
         echo "failure";
